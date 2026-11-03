@@ -3,63 +3,147 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CodeStart Academy offering Java, Python, JavaScript and HTML courses.">
+    <meta name="description" content="CodeStart Academy teaches Java, SQL, Spring Boot, Low Level Design, DSA, HTML and CSS through clear concepts and practical coding.">
     <meta property="og:title" content="CodeStart Academy | Online Coding Courses">
-    <meta property="og:description" content="Live online courses in Java, SQL, Spring Boot and more.">
+    <meta property="og:description" content="Build strong fundamentals and become a confident developer. Live online courses in Java, SQL, Spring Boot and more.">
     <meta property="og:type" content="website">
-    <title>Coaching Centre | Java, Python, JavaScript Courses</title>
+    <title>CodeStart Academy | Online Java, SQL and Spring Boot Courses</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
     <header>
-      <h1>CodeStart Academy</h1>
+      <h1>&lt;/&gt; CodeStart Academy</h1>
     </header>
 
     <nav>
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">About</a>
       <a href="courses.html">Courses</a>
-      <a href="faculty.html">Faculty</a>
-      <a href="results.html">Results</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="#approach">Our Approach</a>
       <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn join-btn">Join Now</a>
     </nav>
 
+    <section class="home-hero">
+      <p class="eyebrow">CodeStart Academy</p>
+      <h2 class="hero-title">Build Strong Fundamentals. Become a Confident Developer.</h2>
+      <p>Learn programming through clear concepts, practical coding, and real-world problem-solving. Start with the fundamentals and grow with every technology.</p>
+      <div class="hero-buttons">
+        <a href="courses.html" class="btn">Explore Courses &rarr;</a>
+        <a href="contact.html" class="btn btn-outline">Join Our Academy</a>
+      </div>
+      <img src="images/hero-classroom.jpg"
+           alt="Students learning to code on laptops"
+           width="1200" height="500" class="hero-img">
+    </section>
+
     <main>
-      <section id="courses">
-        <h2>Courses We Offer</h2>
-  <ul>
-  <li class="course-card">Java</li>
-  <li class="course-card">SQL</li>
-  <li class="course-card">Spring Boot</li>
-  <li class="course-card">Low Level Design</li>
-  <li class="course-card">Data Structures and Algorithms</li>
-  <li class="course-card">HTML and CSS</li>
-</ul>
-        <p><a href="courses.html">See all course details</a></p>
+
+      <section id="courses" class="home-block">
+        <h2>Explore What You&rsquo;ll Learn</h2>
+        <img src="images/course-package.jpg"
+             alt="Laptop with code, database tables and algorithm notes"
+             width="900" height="450" class="hero-img">
+        <div class="card-grid">
+          <a href="courses.html" class="mini-card">
+            <h3>Java</h3>
+            <p>Core programming and OOP</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>SQL</h3>
+            <p>Database concepts and queries</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>Spring Boot</h3>
+            <p>Backend application development</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>HTML &amp; CSS</h3>
+            <p>Web development foundations</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>Git &amp; GitHub</h3>
+            <p>Version control and collaboration</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>DSA</h3>
+            <p>Logic and problem-solving</p>
+          </a>
+          <a href="courses.html" class="mini-card">
+            <h3>LLD</h3>
+            <p>Low-Level Design principles</p>
+          </a>
+        </div>
       </section>
 
-      <section id="admission">
-        <h2>Admission Process</h2>
-    <ol>
-  <li>Send an enquiry using the form</li>
-  <li>Submit the required documents online</li>
-  <li>Pay the admission fee online</li>
-  <li>Join the online orientation session</li>
-</ol>
-        <p><a href="contact.html">Start your enquiry</a></p>
+      <section id="approach" class="home-block">
+        <h2>We Focus on Understanding, Not Just Syntax</h2>
+        <ul>
+          <li>Strong programming fundamentals</li>
+          <li>Simple, beginner-friendly explanations</li>
+          <li>Practical coding and problem-solving</li>
+          <li>Learning concepts that transfer across technologies</li>
+        </ul>
       </section>
-      <a href="https://wa.me/917075405512?text=Hi%2C%20I%20want%20course%20details%20of%20CodeStart%20Academy"
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener"
-   aria-label="Chat with CodeStart Academy on WhatsApp">
-  WhatsApp
-</a>
+
+      <section id="path" class="home-block">
+        <h2>Your Learning Path</h2>
+        <div class="card-grid">
+          <div class="mini-card">
+            <p class="step-no">01</p>
+            <h3>Programming Fundamentals</h3>
+          </div>
+          <div class="mini-card">
+            <p class="step-no">02</p>
+            <h3>Java &amp; OOP</h3>
+          </div>
+          <div class="mini-card">
+            <p class="step-no">03</p>
+            <h3>SQL &amp; Databases</h3>
+          </div>
+          <div class="mini-card">
+            <p class="step-no">04</p>
+            <h3>DSA &amp; Problem-Solving</h3>
+          </div>
+          <div class="mini-card">
+            <p class="step-no">05</p>
+            <h3>Spring Boot &amp; Backend Development</h3>
+          </div>
+          <div class="mini-card">
+            <p class="step-no">06</p>
+            <h3>Git, GitHub &amp; LLD</h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="home-block split">
+        <img src="images/about-team.jpg"
+             alt="Students and trainer in a discussion at CodeStart Academy">
+        <div>
+          <h2>Our Mission</h2>
+          <p>To empower every aspiring learner with the knowledge, confidence, and technical foundation to succeed in the programming world.</p>
+          <p>We believe strong fundamentals create limitless possibilities. By nurturing logical thinking, practical problem-solving, and adaptability, we prepare students not just to learn a technology, but to grow with every technology.</p>
+          <p><a href="about.html">Read more about us &rarr;</a></p>
+        </div>
+      </section>
+
+      <section class="cta-box">
+        <h2>Ready to Start Your Coding Journey?</h2>
+        <p>Take your first step toward understanding programming with CodeStart Academy.</p>
+        <a href="contact.html" class="btn">Enquire About Admission &rarr;</a>
+      </section>
+
     </main>
 
     <footer>
-      <p>Contact Us: codestart9989@gmail.com | +91 70754 05512: info@lowbudgetcoachingcentre.com | +91 00000 00000</p>
+      <p>
+        Contact Us:
+        <a href="mailto:codestart9989@gmail.com">codestart9989@gmail.com</a> |
+        <a href="tel:+917075405512">+91 70754 05512</a> |
+        <a href="https://wa.me/917075405512?text=Hi%2C%20I%20want%20course%20details" target="_blank" rel="noopener">WhatsApp us</a>
+      </p>
     </footer>
+
   </body>
 </html>
