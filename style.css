@@ -516,3 +516,55 @@ button {
 body:has(.course-detail:target) .course-picker {
   display: none;
 }
+/* Tighter header, nav and hero */
+header h1 {
+  padding: 12px;
+  margin: 0;
+  font-size: 28px;
+}
+
+nav {
+  margin: 8px 15px;
+  padding: 10px;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  text-align: left;
+  padding: 24px 20px;
+  margin: 0;
+}
+
+.home-hero .eyebrow {
+  margin-bottom: 6px;
+}
+
+.home-hero .hero-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.hero-text .hero-buttons {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.home-hero .hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text .hero-buttons {
+    justify-content: center;
+  }
+}
