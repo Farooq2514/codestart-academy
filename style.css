@@ -503,3 +503,16 @@ button {
 .cta-box p {
   color: var(--color-white);
 }
+/* Show only the chosen course on the homepage */
+.course-detail {
+  display: none;
+  scroll-margin-top: 20px;
+}
+
+.course-detail:target {
+  display: block;
+}
+
+body:has(.course-detail:target) .course-picker {
+  display: none;
+}
