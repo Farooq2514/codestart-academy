@@ -330,3 +330,29 @@ button {
 button {
   width: 100%;
 }
+.course-item {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.course-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.course-info {
+  width: 100%;
+}
+
+.course-info .btn {
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
