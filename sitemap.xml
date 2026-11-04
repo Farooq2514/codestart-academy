@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://yourdomain.com/index.html</loc></url>
-  <url><loc>https://yourdomain.com/about.html</loc></url>
-  <url><loc>https://yourdomain.com/courses.html</loc></url>
-  <url><loc>https://yourdomain.com/faculty.html</loc></url>
-  <url><loc>https://yourdomain.com/gallery.html</loc></url>
-  <url><loc>https://yourdomain.com/contact.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/about.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/courses.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/faculty.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/gallery.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/contact.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/privacy.html</loc></url>
+  <url><loc>https://farooq2514.github.io/codestart-academy/terms.html</loc></url>
 </urlset>
