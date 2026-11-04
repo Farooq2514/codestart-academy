@@ -31,22 +31,29 @@
 
       <section class="home-block">
         <h2>What You&rsquo;ll See Here</h2>
+        <p>Tap any photo to view it full size.</p>
         <div class="gallery-grid">
 
           <article class="gallery-card">
-            <img src="images/course-html-css.jpg" alt="Website layout on a laptop screen">
+            <a href="#photo-1" aria-label="Open photo: Website layout on a laptop screen">
+              <img src="images/course-html-css.jpg" alt="Website layout on a laptop screen">
+            </a>
             <h3>Learning in Action</h3>
             <p>Discover how we make programming concepts simple, practical, and engaging.</p>
           </article>
 
           <article class="gallery-card">
-            <img src="images/course-dsa.jpg" alt="Algorithm notes on a whiteboard">
+            <a href="#photo-2" aria-label="Open photo: Algorithm notes on a whiteboard">
+              <img src="images/course-dsa.jpg" alt="Algorithm notes on a whiteboard">
+            </a>
             <h3>Hands-On Practice</h3>
             <p>Explore our approach to coding exercises, problem-solving, and building projects.</p>
           </article>
 
           <article class="gallery-card">
-            <img src="images/course-springboot.jpg" alt="Developer working on a software project">
+            <a href="#photo-3" aria-label="Open photo: Developer working on a software project">
+              <img src="images/course-springboot.jpg" alt="Developer working on a software project">
+            </a>
             <h3>Technology &amp; Innovation</h3>
             <p>A glimpse into the technologies we explore, including Java, SQL, Spring Boot, DSA, and software design.</p>
           </article>
@@ -65,6 +72,22 @@
         <a href="contact.html" class="btn">Enquire About Admission &rarr;</a>
       </section>
     </main>
+
+    <!-- Full-size photo viewers: each one opens only when its photo is clicked -->
+    <div id="photo-1" class="lightbox">
+      <a href="#" class="close">Close &times;</a>
+      <img src="images/course-html-css.jpg" alt="Website layout on a laptop screen">
+    </div>
+
+    <div id="photo-2" class="lightbox">
+      <a href="#" class="close">Close &times;</a>
+      <img src="images/course-dsa.jpg" alt="Algorithm notes on a whiteboard">
+    </div>
+
+    <div id="photo-3" class="lightbox">
+      <a href="#" class="close">Close &times;</a>
+      <img src="images/course-springboot.jpg" alt="Developer working on a software project">
+    </div>
 
     <footer>
       <p>
