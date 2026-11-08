@@ -672,3 +672,48 @@ nav {
 .highlight-box img {
   margin: 12px 0;
 }
+.support-banner {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  color: var(--color-white);
+  text-align: center;
+  padding: 36px 24px;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.support-banner .eyebrow {
+  color: var(--color-highlight);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.support-banner h2 {
+  color: var(--color-white);
+  font-size: 28px;
+  margin: 0 0 12px 0;
+}
+
+.support-banner p {
+  color: var(--color-white);
+  max-width: 680px;
+  margin: 0 auto 18px auto;
+}
+
+.support-banner .btn {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.support-banner .btn:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .support-banner h2 {
+    font-size: 22px;
+  }
+}
