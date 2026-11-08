@@ -715,3 +715,59 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+/* More Than Just an Online Class: normal section */
+.support-section h2 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.support-section > p {
+  color: var(--color-text);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.support-list li {
+  color: var(--color-text);
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 8px 0 8px 24px;
+  position: relative;
+}
+
+.support-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.support-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.support-action {
+  margin-top: 28px;
+}
+
+@media (max-width: 700px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
