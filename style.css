@@ -656,3 +656,19 @@ nav {
   text-decoration: none;
   z-index: 2001;
 }
+.highlight-box {
+  background-color: #eef4ff;
+  border-left: 6px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.highlight-box h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.highlight-box img {
+  margin: 12px 0;
+}
