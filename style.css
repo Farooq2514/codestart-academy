@@ -672,18 +672,24 @@ nav {
 .highlight-box img {
   margin: 12px 0;
 }
+/* Support banner: clean layout with photo */
 .support-banner {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+  background-color: var(--color-primary);
   color: var(--color-white);
-  text-align: center;
-  padding: 36px 24px;
+  padding: 36px 32px;
   margin: 0;
   border-radius: 0;
   box-shadow: none;
+  text-align: left;
 }
 
-.support-banner .eyebrow {
+.support-text .eyebrow {
   color: var(--color-highlight);
+  font-size: 13px;
   font-weight: bold;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -692,28 +698,67 @@ nav {
 
 .support-banner h2 {
   color: var(--color-white);
-  font-size: 28px;
-  margin: 0 0 12px 0;
+  font-size: 26px;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
 }
 
-.support-banner p {
+.support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.support-list li {
   color: var(--color-white);
-  max-width: 680px;
-  margin: 0 auto 18px auto;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 8px 0 8px 22px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.support-list li:last-child {
+  border-bottom: none;
+}
+
+.support-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-highlight);
+  font-weight: bold;
 }
 
 .support-banner .btn {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-}
-
-.support-banner .btn:hover {
   background-color: var(--color-highlight);
   color: var(--color-primary);
 }
 
-@media (max-width: 600px) {
+.support-banner .btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.support-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .support-banner {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
   .support-banner h2 {
     font-size: 22px;
+  }
+
+  .support-img {
+    height: 200px;
   }
 }
