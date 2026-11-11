@@ -6,13 +6,14 @@
     <meta name="description" content="Enquire about admission at CodeStart Academy. Live online courses in Java, SQL, Spring Boot, Low Level Design, DSA, HTML and CSS.">
     <title>Contact and Enquiry | CodeStart Academy</title>
     <link rel="stylesheet" href="style.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S1333WQDV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7S1333WQDV');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S1333WQDV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7S1333WQDV');
+    </script>
+  </head>
   <body>
     <header>
       <h1>CodeStart Academy</h1>
@@ -40,17 +41,17 @@
 
       <section id="enquiry">
         <h2>Admission Enquiry</h2>
-        <form>
+        <form id="enquiryForm">
           <div class="form-group">
             <label for="course">Course interested in</label>
             <select id="course" name="course" required>
               <option value="">Select a course</option>
-              <option value="java">Java</option>
-              <option value="sql">SQL</option>
-              <option value="springboot">Spring Boot</option>
-              <option value="lld">Low Level Design</option>
-              <option value="dsa">Data Structures and Algorithms</option>
-              <option value="html-css">HTML and CSS</option>
+              <option value="Java">Java</option>
+              <option value="SQL">SQL</option>
+              <option value="Spring Boot">Spring Boot</option>
+              <option value="Low Level Design">Low Level Design</option>
+              <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
+              <option value="HTML and CSS">HTML and CSS</option>
             </select>
           </div>
 
@@ -72,8 +73,16 @@
                    placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
           </div>
 
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="3"
+                      placeholder="Any question about the course or batch timings"></textarea>
+          </div>
+
           <button type="submit">Submit enquiry</button>
         </form>
+
+        <p id="formMessage" role="status"></p>
       </section>
     </main>
 
@@ -88,5 +97,42 @@
         <a href="terms.html">Terms of Use</a>
       </p>
     </footer>
+
+    <script>
+      const API_URL = "http://localhost:8080/api/enquiries";
+
+      document.getElementById("enquiryForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const status = document.getElementById("formMessage");
+
+        const data = {
+          name: form.studentName.value.trim(),
+          email: form.email.value.trim(),
+          phone: form.phone.value.trim(),
+          course: form.course.value,
+          message: form.message.value.trim()
+        };
+
+        try {
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+          const result = await response.json();
+
+          if (response.ok) {
+            status.textContent = "Thank you! Your enquiry is received. Reference number: " + result.referenceId;
+            form.reset();
+          } else {
+            status.textContent = "Please check: " + Object.values(result.errors || {}).join(", ");
+          }
+        } catch (error) {
+          status.textContent = "Could not reach the server. Please call us on +91 70754 05512.";
+        }
+      });
+    </script>
   </body>
 </html>
