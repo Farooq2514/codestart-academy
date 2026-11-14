@@ -869,3 +869,7 @@ nav {
   width: auto;
   min-height: 44px;
 }
+.chat-toggle {
+  width: 52px !important;
+  min-height: 52px !important;
+}
