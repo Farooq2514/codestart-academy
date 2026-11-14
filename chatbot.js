@@ -4,6 +4,10 @@
   const button = document.createElement("button");
   button.className = "chat-toggle";
   button.setAttribute("aria-label", "Open chatbot");
+  const label = document.createElement("span");
+label.className = "chat-label";
+label.textContent = "Chat with us";
+button.appendChild(label);
   button.innerHTML =
     '<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">' +
     '<rect x="5" y="8" width="14" height="11" rx="3" fill="currentColor"/>' +

@@ -873,3 +873,16 @@ nav {
   width: 52px !important;
   min-height: 52px !important;
 }
+/* Chatbot label beside the robot */
+.chat-toggle {
+  width: auto !important;
+  border-radius: 30px !important;
+  padding: 0 16px 0 12px !important;
+  gap: 8px;
+}
+
+.chat-label {
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
