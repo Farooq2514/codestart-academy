@@ -4,10 +4,6 @@
   const button = document.createElement("button");
   button.className = "chat-toggle";
   button.setAttribute("aria-label", "Open chatbot");
-  const label = document.createElement("span");
-label.className = "chat-label";
-label.textContent = "Chat with us";
-button.appendChild(label);
   button.innerHTML =
     '<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">' +
     '<rect x="5" y="8" width="14" height="11" rx="3" fill="currentColor"/>' +
@@ -17,13 +13,18 @@ button.appendChild(label);
     '<circle cx="12" cy="3" r="1.5" fill="currentColor"/>' +
     "</svg>";
 
+  const label = document.createElement("span");
+  label.className = "chat-label";
+  label.textContent = "Ask us a question";
+  button.appendChild(label);
+
   const box = document.createElement("div");
   box.className = "chat-box";
   box.hidden = true;
   box.innerHTML =
     '<div class="chat-header"><strong>CodeStart Assistant</strong>' +
     '<button type="button" aria-label="Close chat">&times;</button></div>' +
-    '<div class="chat-messages"><p class="chat-bot">Hi! Ask me about courses, fees, or batch timings.</p></div>' +
+    '<div class="chat-messages"><p class="chat-bot">Hello! I am the CodeStart Assistant. Ask me about courses, fees, batch timings, or admission.</p></div>' +
     '<form class="chat-form"><input type="text" placeholder="Type your question" required>' +
     '<button type="submit">Send</button></form>';
 
