@@ -16,6 +16,60 @@
   gtag('js', new Date());
   gtag('config', 'G-7S1333WQDV');
 </script>
+<button id="chatToggle" class="chat-toggle" aria-label="Open chat">Chat with us</button>
+
+<div id="chatBox" class="chat-box" hidden>
+  <div class="chat-header">
+    <strong>CodeStart Assistant</strong>
+    <button id="chatClose" aria-label="Close chat">&times;</button>
+  </div>
+  <div id="chatMessages" class="chat-messages">
+    <p class="chat-bot">Hi! Ask me about courses, fees, or batch timings.</p>
+  </div>
+  <form id="chatForm" class="chat-form">
+    <input id="chatInput" type="text" placeholder="Type your question" required>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  const CHAT_API = "http://localhost:8080/api/chat";
+  const chatBox = document.getElementById("chatBox");
+  const messages = document.getElementById("chatMessages");
+
+  document.getElementById("chatToggle").addEventListener("click", () => {
+    chatBox.hidden = !chatBox.hidden;
+  });
+  document.getElementById("chatClose").addEventListener("click", () => {
+    chatBox.hidden = true;
+  });
+
+  document.getElementById("chatForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const input = document.getElementById("chatInput");
+    const question = input.value.trim();
+    if (!question) return;
+
+    messages.insertAdjacentHTML("beforeend", `<p class="chat-user"></p>`);
+    messages.lastElementChild.textContent = question;
+    input.value = "";
+
+    try {
+      const response = await fetch(CHAT_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: question })
+      });
+      const data = await response.json();
+      messages.insertAdjacentHTML("beforeend", `<p class="chat-bot"></p>`);
+      messages.lastElementChild.textContent = data.reply;
+    } catch (error) {
+      messages.insertAdjacentHTML("beforeend", `<p class="chat-bot"></p>`);
+      messages.lastElementChild.textContent = "I can't reach the server right now. Please call +91 70754 05512.";
+    }
+    messages.scrollTop = messages.scrollHeight;
+  });
+</script>
   <body>
 
     <header>
